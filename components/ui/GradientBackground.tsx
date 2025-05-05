@@ -1,20 +1,13 @@
 import React from 'react';
-import { StyleSheet, ViewProps } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Colors } from '@/constants/Colors';
 
-type GradientBackgroundProps = ViewProps & {
-  children: React.ReactNode;
-};
-
-export default function GradientBackground({ children, style, ...props }: GradientBackgroundProps) {
+export default function GradientBackground({ children }: { children: React.ReactNode }) {
   return (
     <LinearGradient
-      colors={[Colors.background.primary, Colors.background.secondary]}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1 }}
-      style={[styles.container, style]}
-      {...props}
+      colors={[Colors.background.primary, Colors.background.tertiary]}
+      style={styles.container}
     >
       {children}
     </LinearGradient>
