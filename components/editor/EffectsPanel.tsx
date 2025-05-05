@@ -1,0 +1,1 @@
+// Content from components/editor/EffectsPanel.tsx shown above
